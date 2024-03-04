@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saludo Personalizado</title>
+  <!-- Agregamos los estilos de Bootstrap -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Estilos personalizados */
+    .container {
+      text-align: center;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 id="saludo">¡Hola!</h1>
+    <button class="btn btn-primary" onclick="cambiarNombre()">¡Cambiar el nombre!</button>
+  </div>
+
+  <script>
+    function cambiarNombre() {
+      // Solicitamos al usuario su nombre utilizando prompt
+      var nombre = prompt("¿Cuál es tu nombre?");
+      if (nombre !== null) { // Si el usuario ingresa un nombre y no cancela
+        // Actualizamos el texto de saludo con el nombre ingresado
+        document.getElementById("saludo").innerText = "¡Hola " + nombre + "!";
+      }
+    }
+  </script>
+</body>
+</html>
